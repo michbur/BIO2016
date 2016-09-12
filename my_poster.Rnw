@@ -102,7 +102,7 @@ The best-performing predictor, AmyloGram, was compared to state-of-art predictor
 
 \begin{block}{Training of AmyloGram}
 \begin{figure} 
-\includegraphics[width=0.85\columnwidth]{static_figure/ngram_scheme_poster.eps}
+\includegraphics[width=0.86\columnwidth]{static_figure/ngram_scheme_poster.eps}
 \end{figure}
 
     \end{block}
@@ -126,7 +126,7 @@ Distribution of mean AUC values of classifiers with various reduced alphabets
 for every possible combination of training and testing data set including 
 different lengths of sequences. 
 
-<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=5.8,warning=FALSE>>=
+<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=5.9,warning=FALSE>>=
 amyloids_plot <- read.csv("amyloid_plot_data.csv")
 
 levels(amyloids_plot[["et"]]) <- c("Best-performing reduced alphabet", 
@@ -179,7 +179,7 @@ confidence interval.
 
 
 \begin{block}{Similarity index}
-<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=6.3,warning=FALSE>>=
+<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=6.1,warning=FALSE>>=
 si_dat <- read.csv2("si_dat.csv")
 
 levels(si_dat[["et"]]) <- c("Best-performing reduced alphabet", 
@@ -217,7 +217,7 @@ Similarity index~\citep{stephenson_unearthing_2013} measures the similarity betw
 
 
 \begin{block}{Informative n-grams}
-<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=6,warning=FALSE>>=
+<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=5.8,warning=FALSE>>=
 ngram_freq <- read.csv("ngram_freq.csv")
 
 ngram_freq_plot <- mutate(ngram_freq, decoded_name = gsub("_", "|", decoded_name)) %>%
@@ -299,9 +299,13 @@ Our algorithm was also capable of extracting n-gram associated with amyloidogeni
 
 \begin{block}{Availability and funding}
 
-Our software is available as a web-server: \url{smorfland.uni.wroc.pl/amylogram}.
+Our software is available as a web-server: \url{smorfland.uni.wroc.pl/amylogram}
 
-\bigskip
+\medskip
+
+Find our poster online: \url{http://github.com/michbur/BIO2016}
+
+\medskip
 
 \small{This research was partially funded by the KNOW Consortium and National Science Center (2015/17/N/NZ2/01845).}
 
